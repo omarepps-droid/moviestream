@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieStream - Watch Free Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-film"></i>
+                <h1>MovieStream</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Movies</a>
+                <a href="#">TV Shows</a>
+                <a href="#">My List</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" id="searchInput" placeholder="Search movies...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Featured Movie</h2>
+            <p class="hero-description">Watch the latest and greatest movies for free</p>
+            <button class="hero-btn" id="playFeaturedBtn"><i class="fas fa-play"></i> Play Now</button>
+        </div>
+    </section>
+
+    <!-- Movie Categories -->
+    <main class="main-content">
+        <!-- Popular Movies -->
+        <section class="category-section">
+            <h2 class="category-title">Popular Movies</h2>
+            <div class="movies-row" id="popularMovies">
+                <!-- Movies will be loaded here -->
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Action Movies -->
+        <section class="category-section">
+            <h2 class="category-title">Action Movies</h2>
+            <div class="movies-row" id="actionMovies">
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Comedy Movies -->
+        <section class="category-section">
+            <h2 class="category-title">Comedy Movies</h2>
+            <div class="movies-row" id="comedyMovies">
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Video Player Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="video-container" id="videoContainer">
+                <iframe id="videoPlayer" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MovieStream. All rights reserved.</p>
+        <p>Powered by TMDB API & Vidsrc</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
